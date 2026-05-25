@@ -1,6 +1,8 @@
 const Database = require('better-sqlite3');
 const db = new Database('albion_events.db', { verbose: console.log });
 
+
+
 // Criar tabelas
 db.exec(`
   CREATE TABLE IF NOT EXISTS events (
@@ -24,5 +26,10 @@ db.exec(`
     PRIMARY KEY (event_id, user_id)
   );
 `);
+
+{
+  "prefix": "!",
+  "embedColor": "#00b0ff"
+}
 
 module.exports = db;
